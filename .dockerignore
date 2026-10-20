@@ -1,0 +1,4 @@
+**
+!Dockerfile
+!checks/
+!checks/check_image.py
