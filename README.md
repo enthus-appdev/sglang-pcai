@@ -21,6 +21,8 @@ There are **no SGLang patches, additional Python dependencies, baked model weigh
 
 These checks establish packaging/source expectations, **not** two-H100-NVL fit, numerical correctness, long-context stability or performance.
 
+**Observed PCAI startup blocker (2026-10-21):** the TP2 trial launched this image but repeatedly failed during NCCL communicator initialization with `No space left on device` while extending `/dev/shm/nccl-*` to 34,210,180 bytes (32.625 MiB segment payload). It never established model-serving readiness. The serving container's total SHM capacity was not measurable with available permissions. Resolve shared-memory provisioning or qualify a targeted NCCL workaround before treating the example below as deployable; lowering context is not an established fix.
+
 ## Build and publish
 
 GitHub Actions workflow: [`.github/workflows/build.yml`](.github/workflows/build.yml).
