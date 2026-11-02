@@ -1,5 +1,5 @@
 # SGLang v0.5.22, linux/amd64; source baa9befa381511cd4d56f83980951e5a45fffc6d.
-FROM docker.io/lmsysorg/sglang:v0.5.22-cu130@sha256:5fc09edb6a0bb1d5b6992b543723c66d08f86d7a507e951e87e0d05db4ac766e
+FROM docker.io/lmsysorg/sglang:v0.5.23-cu130@sha256:f832b5c39559c9caa900b22ad37c76fcce66470676855c42052102c537812f1f
 
 LABEL org.opencontainers.image.source="https://github.com/enthus-appdev/sglang-pcai" \
       org.opencontainers.image.title="sglang-pcai" \
